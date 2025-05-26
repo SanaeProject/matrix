@@ -157,14 +157,14 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
       {7,8,9}
     };
   ```
-  $$
-    mat =
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-  $$
+$$
+	mat =
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+$$
 
 - `Matrix(const MatrixType<>&);`  
   コピーコンストラクタ
@@ -175,13 +175,13 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     using Type = int;
     Matrix<int> mat({2,3}); // {rowCount,colCount}
   ```
-  $$
-    mat =
-    \begin{bmatrix}
-    0 & 0 & 0 \\
-    0 & 0 & 0
-    \end{bmatrix}
-  $$
+$$
+	mat =
+	\begin{bmatrix}
+	0 & 0 & 0 \\
+	0 & 0 & 0
+	\end{bmatrix}
+$$
 
 - `Matrix(const Matrix<Type, DcmpType>&);`  
   コピーコンストラクタ
@@ -215,23 +215,23 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat = {{1,2,3},{4,5,6},{7,8,9}};
     std::cout << mat[1] << std::endl;
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    \cdot
-    \begin{bmatrix}
-    0 & 1 & 0 \\
-    0 & 1 & 0 \\
-    0 & 1 & 0
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    4 & 5 & 6
-    \end{bmatrix}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	\cdot
+	\begin{bmatrix}
+	0 & 1 & 0 \\
+	0 & 1 & 0 \\
+	0 & 1 & 0
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	4 & 5 & 6
+	\end{bmatrix}
+$$
 
 - `Matrix<Type>& operator+=(const Matrix<Type>&);`  
   加算
@@ -241,31 +241,31 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat2 = {{9,8,7},{6,5,4},{3,2,1}};
     mat1 += mat2; // mat1 = {{10,10,10},{10,10,10},{10,10,10}}
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    +
-    \begin{bmatrix}
-    9 & 8 & 7 \\
-    6 & 5 & 4 \\
-    3 & 2 & 1
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    (1+9) & (2+8) & (3+7) \\
-    (4+6) & (5+5) & (6+4) \\
-    (7+3) & (8+2) & (9+1)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    10 & 10 & 10 \\
-    10 & 10 & 10 \\
-    10 & 10 & 10
-    \end{bmatrix}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	+
+	\begin{bmatrix}
+	9 & 8 & 7 \\
+	6 & 5 & 4 \\
+	3 & 2 & 1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	(1+9) & (2+8) & (3+7) \\
+	(4+6) & (5+5) & (6+4) \\
+	(7+3) & (8+2) & (9+1)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	10 & 10 & 10 \\
+	10 & 10 & 10 \\
+	10 & 10 & 10
+	\end{bmatrix}
+$$
 
 - `Matrix<Type>& operator-=(const Matrix<Type>&);`  
   減算
@@ -275,31 +275,31 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat2 = {{9,8,7},{6,5,4},{3,2,1}};
     mat1 -= mat2; // mat1 = {{-8,-6,-4},{-2,0,2},{4,6,8}}
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    -
-    \begin{bmatrix}
-    9 & 8 & 7 \\
-    6 & 5 & 4 \\
-    3 & 2 & 1
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    (1-9) & (2-8) & (3-7) \\
-    (4-6) & (5-5) & (6-4) \\
-    (7-3) & (8-2) & (9-1)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    -8 & -6 & -4 \\
-    -2 & 0 & 2 \\
-    4 & 6 & 8
-    \end{bmatrix}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	-
+	\begin{bmatrix}
+	9 & 8 & 7 \\
+	6 & 5 & 4 \\
+	3 & 2 & 1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	(1-9) & (2-8) & (3-7) \\
+	(4-6) & (5-5) & (6-4) \\
+	(7-3) & (8-2) & (9-1)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	-8 & -6 & -4 \\
+	-2 & 0 & 2 \\
+	4 & 6 & 8
+	\end{bmatrix}
+$$
 
 - `Matrix<Type>& operator*=(const Matrix<Type>&);`  
   乗算
@@ -309,37 +309,37 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat2 = {{9,8,7},{6,5,4},{3,2,1}};
     mat1 *= mat2; // mat1 = {{30,24,18},{84,69,54},{138,114,90}}
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    \cdot
-    \begin{bmatrix}
-    9 & 8 & 7 \\
-    6 & 5 & 4 \\
-    3 & 2 & 1
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    (1\cdot9 + 2\cdot6 + 3\cdot3) & (1\cdot8 + 2\cdot5 + 3\cdot2) & (1\cdot7 + 2\cdot4 + 3\cdot1) \\
-    (4\cdot9 + 5\cdot6 + 6\cdot3) & (4\cdot8 + 5\cdot5 + 6\cdot2) & (4\cdot7 + 5\cdot4 + 6\cdot1) \\
-    (7\cdot9 + 8\cdot6 + 9\cdot3) & (7\cdot8 + 8\cdot5 + 9\cdot2) & (7\cdot7 + 8\cdot4 + 9\cdot1)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    30 & 24 & 18 \\
-    84 & 69 & 54 \\
-    138 & 114 &90
-    \end{bmatrix}
-  $$
-  $$
-    mat1 \cdot mat2 = C
-  $$
-  $$
-    C_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	\cdot
+	\begin{bmatrix}
+	9 & 8 & 7 \\
+	6 & 5 & 4 \\
+	3 & 2 & 1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	(1\cdot9 + 2\cdot6 + 3\cdot3) & (1\cdot8 + 2\cdot5 + 3\cdot2) & (1\cdot7 + 2\cdot4 + 3\cdot1) \\
+	(4\cdot9 + 5\cdot6 + 6\cdot3) & (4\cdot8 + 5\cdot5 + 6\cdot2) & (4\cdot7 + 5\cdot4 + 6\cdot1) \\
+	(7\cdot9 + 8\cdot6 + 9\cdot3) & (7\cdot8 + 8\cdot5 + 9\cdot2) & (7\cdot7 + 8\cdot4 + 9\cdot1)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	30 & 24 & 18 \\
+	84 & 69 & 54 \\
+	138 & 114 &90
+	\end{bmatrix}
+$$
+$$
+	mat1 \cdot mat2 = C
+$$
+$$
+	C_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}
+$$
 
 - `Matrix<Type>& operator^=(const Matrix<Type>&);`  
   アダマール積
@@ -349,31 +349,31 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat2 = {{9,8,7},{6,5,4},{3,2,1}};
     mat1 ^= mat2; // mat1 = {{9,16,21},{24,25,24},{21,16,9}}
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    \circ
-    \begin{bmatrix}
-    9 & 8 & 7 \\
-    6 & 5 & 4 \\
-    3 & 2 & 1
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    (1\cdot9) & (2\cdot8) & (3\cdot7) \\
-    (4\cdot6) & (5\cdot5) & (6\cdot4) \\
-    (7\cdot3) & (8\cdot2) & (9\cdot1)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    9 & 16 & 21 \\
-    24 & 25 & 24 \\
-    21 & 16 & 9
-    \end{bmatrix}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	\circ
+	\begin{bmatrix}
+	9 & 8 & 7 \\
+	6 & 5 & 4 \\
+	3 & 2 & 1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	(1\cdot9) & (2\cdot8) & (3\cdot7) \\
+	(4\cdot6) & (5\cdot5) & (6\cdot4) \\
+	(7\cdot3) & (8\cdot2) & (9\cdot1)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	9 & 16 & 21 \\
+	24 & 25 & 24 \\
+	21 & 16 & 9
+	\end{bmatrix}
+$$
 
 - `Matrix<Type>& operator/=(const Matrix<Type>&);`  
   アダマール除算
@@ -383,31 +383,31 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat2 = {{9,8,7},{6,5,4},{3,2,1}};
     mat1 /= mat2; // mat1 = {{0.111111,0.25,0.428571},{0.666667,1.0,1.5},{2.33333,4.0,9.0}}
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    \oslash
-    \begin{bmatrix}
-    9 & 8 & 7 \\
-    6 & 5 & 4 \\
-    3 & 2 & 1
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    (1/9) & (2/8) & (3/7) \\
-    (4/6) & (5/5) & (6/4) \\
-    (7/3) & (8/2) & (9/1)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    0.111111 & 0.25 & 0.428571 \\
-    0.666667 & 1.0 & 1.5 \\
-    2.33333 & 4.0 & 9.0
-    \end{bmatrix}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	\oslash
+	\begin{bmatrix}
+	9 & 8 & 7 \\
+	6 & 5 & 4 \\
+	3 & 2 & 1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	(1/9) & (2/8) & (3/7) \\
+	(4/6) & (5/5) & (6/4) \\
+	(7/3) & (8/2) & (9/1)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	0.111111 & 0.25 & 0.428571 \\
+	0.666667 & 1.0 & 1.5 \\
+	2.33333 & 4.0 & 9.0
+	\end{bmatrix}
+$$
 
 - `Matrix<Type>& operator*=(const Type&);`  
   スカラ乗算
@@ -416,27 +416,27 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
     Matrix<Type> mat = {{1,2,3},{4,5,6},{7,8,9}};
     mat *= 2; // mat = {{2,4,6},{8,10,12},{14,16,18}}
   ```
-  $$
-    \begin{bmatrix}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
-    \end{bmatrix}
-    \cdot
-    2
-    =
-    \begin{bmatrix}
-    (1\cdot2) & (2\cdot2) & (3\cdot2) \\
-    (4\cdot2) & (5\cdot2) & (6\cdot2) \\
-    (7\cdot2) & (8\cdot2) & (9\cdot2)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    2 & 4 & 6 \\
-    8 & 10 & 12 \\
-    14 & 16 & 18
-    \end{bmatrix}
-  $$
+$$
+	\begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+	\cdot
+	2
+	=
+	\begin{bmatrix}
+	(1\cdot2) & (2\cdot2) & (3\cdot2) \\
+	(4\cdot2) & (5\cdot2) & (6\cdot2) \\
+	(7\cdot2) & (8\cdot2) & (9\cdot2)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	2 & 4 & 6 \\
+	8 & 10 & 12 \\
+	14 & 16 & 18
+	\end{bmatrix}
+$$
 
 - `Matrix<Type> operator+(const Matrix<Type>&);`  
   加算
@@ -463,122 +463,133 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
 ### メンバ関数
 - `Matrix<Type>& add(const Matrix<Type>&);`  
   加算
-  $$
-    A + B = C
-  $$
-  $$
-    C_{ij} = A_{ij} + B_{ij}
-  $$
+  
+$$
+	A + B = C
+$$
+$$
+	C_{ij} = A_{ij} + B_{ij}
+$$
 
 - `Matrix<Type>& sub(const Matrix<Type>&);`  
   減算
-  $$
-    A - B = C
-  $$
-  $$
-    C_{ij} = A_{ij} - B_{ij}
-  $$
+  
+$$
+	A - B = C
+$$
+$$
+	C_{ij} = A_{ij} - B_{ij}
+$$
 
 - `Matrix<Type>& mul(const Matrix<Type>&);`  
   乗算
-  $$
-    A \cdot B = C
-  $$
-  $$
-    C_{ij} = \sum_{k=1}^{n} A_{ik} B_{kj}
-  $$
+  
+$$
+	A \cdot B = C
+$$
+$$
+	C_{ij} = \sum_{k=1}^{n} A_{ik} B_{kj}
+$$
 
 - `Matrix<Type>& scalarMul(const Type&);`  
   スカラ乗算
-  $$
-    A \cdot k = C
-  $$
-  $$
-    C_{ij} = A_{ij} \cdot k
-  $$
+  
+$$
+	A \cdot k = C
+$$
+$$
+	C_{ij} = A_{ij} \cdot k
+$$
 
 - `Matrix<Type>& hadamardMul(const Matrix<Type>&);`  
   アダマール積
-  $$
-    A \circ B = C
-  $$
-  $$
-    C_{ij} = A_{ij} \cdot B_{ij}
+  
+$$
+	A \circ B = C
+$$
+$$
+	C_{ij} = A_{ij} \cdot B_{ij}
+$$
 
 - `Matrix<Type>& hadamardDiv(const Matrix<Type>&);`  
   アダマール除算
-  $$
-    A \oslash B = C
-  $$
-  $$
-    C_{ij} = \frac{A_{ij}}{B_{ij}}
-  $$
+  
+$$
+	A \oslash B = C
+$$
+$$
+	C_{ij} = \frac{A_{ij}}{B_{ij}}
+$$
 
 - `template<typename calcType>`  
   `Matrix<Type>& scalarCalc(const Matrix<Type>&);`  
   スカラ計算
-  $$
-    A \cdot B = C
-  $$
-  $$
-    C_{ij} = A_{ij} \cdot B_{ij}
-  $$
+  
+$$
+	A \cdot B = C
+$$
+$$
+	C_{ij} = A_{ij} \cdot B_{ij}
+$$
 
 - `std::vector<Matrix<DcmpType>> luDec(DcmpType epsilon = 1e-9);`  
   LU分解
-  $$
-    A = PLU
-  $$
-  $$
-    P: \text{置換行列}, L: \text{下三角行列}, U: \text{上三角行列}
-  $$
-  $$
-    P = identity
-  $$
-  $$
-    L = zero
-  $$
-  $$
-    U = A
-  $$
-  $$
-    L_{ij} = \begin{cases}
-      1 & \text{if } i = j \\
-      0 & \text{if } i < j \\
-      -\frac{A_{ij}}{A_{jj}} & \text{if } i > j
-    \end{cases}
-  $$
-  $$
-    U_{ij} = \begin{cases}
-      A_{ij} & \text{if } i \leq j \\
-      0 & \text{if } i > j
-    \end{cases}
-  $$
-  $$
-    P_{ij} = \begin{cases}
-      1 & \text{if } i = j \\
-      0 & \text{if } i \neq j
-    \end{cases}
-  $$
+  
+$$
+	A = PLU
+$$
+$$
+	P: \text{置換行列}, L: \text{下三角行列}, U: \text{上三角行列}
+$$
+$$
+	P = identity
+$$
+$$
+	L = zero
+$$
+$$
+	U = A
+$$
+$$
+	L_{ij} = \begin{cases}
+	1 & \text{if } i = j \\
+	0 & \text{if } i < j \\
+	-\frac{A_{ij}}{A_{jj}} & \text{if } i > j
+	\end{cases}
+$$
+$$
+	U_{ij} = \begin{cases}
+	A_{ij} & \text{if } i \leq j \\
+	0 & \text{if } i > j
+	\end{cases}
+$$
+$$
+	P_{ij} = \begin{cases}
+	1 & \text{if } i = j \\
+	0 & \text{if } i \neq j
+	\end{cases}
+$$
   
 - `Matrix<DcmpType> inverse(DcmpType epsilon = 1e-9);`  
   逆行列
 
 - `DcmpType det(DcmpType epsilon = 1e-9);`  
   行列式
-  $$
-    \text{det}(A) = \prod_{i=1}^{n} U_{ii}
-  $$
+  
+$$
+	\text{det}(A) = \prod_{i=1}^{n} U_{ii}
+$$
 
 
 - `Matrix<Type> transpose();`  
   転置
-  $$
-    A^T = C
-  $$
-  $$
-    C_{ij} = A_{ji}
-  $$
+  
+$$
+	A^T = C
+$$
+$$
+	C_{ij} = A_{ji}
+$$
 
 - `Matrix<Type>& swapRow(const size_t&, const size_t&);`  
   行の入れ替え
@@ -610,15 +621,16 @@ Type Matrix<Type>::testFuncPublic(const Matrix& a,const Matrix& b){
 - `template<typename Type_ = Type>`  
   `static Matrix<Type_> identity(const size_t&);`  
   単位行列生成
-  $$
-    I_n =
-    \begin{bmatrix}
-    1 & 0 & \cdots & 0 \\
-    0 & 1 & \cdots & 0 \\
-    \vdots & \vdots & \ddots & \vdots \\
-    0 & 0 & \cdots & 1
-    \end{bmatrix}
-  $$
+  
+$$
+	I_n =
+	\begin{bmatrix}
+	1 & 0 & \cdots & 0 \\
+	0 & 1 & \cdots & 0 \\
+	\vdots & \vdots & \ddots & \vdots \\
+	0 & 0 & \cdots & 1
+	\end{bmatrix}
+$$
 
 ### ストリーム出力オーバーロード
 - `template<typename CharT, typename Traits, typename MatrixType = double>`  
